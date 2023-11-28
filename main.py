@@ -1,16 +1,10 @@
-# This is a sample Python script.
+import rock_paper_scissors
+import random
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+player_choice = int(input('What do you choose? Type 0 for Rock, 1 for Paper, and 2 for Scissors'))
+computer_choice = int(round(random.random() * 2))
+result = rock_paper_scissors.evaluate_game(player_choice, computer_choice)
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(rock_paper_scissors.rock_paper_scissors_list[player_choice])
+print(f'Computer chose:\n{rock_paper_scissors.rock_paper_scissors_list[computer_choice]}')
+print(result)
